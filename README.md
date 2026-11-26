@@ -317,34 +317,57 @@ npm run dev
 
 Open the local URL displayed by Vite in your browser.
 
+
+
 ## 12. Screenshots and Evidence
 
-Screenshots documenting the application and its observability results can be added here.
+### 01. Application Interface
 
-### Application Interface
+<p align="center">
+  <a href="docs/evidence/application.jpg">
+    <img src="docs/evidence/application.jpg" width="75%" alt="Caricature Summarizer Application"/>
+  </a>
+</p>
 
-Add screenshots demonstrating the image upload interface and generated descriptions.
+<p align="center">
+  <b>Image Upload & Description Generation</b><br>
+  Demonstrates the application's image upload workflow, AI processing, and generated caricature descriptions.
+</p>
 
-### AmundAI Execution Traces
+---
 
-Add screenshots showing execution traces, model spans, latency, and token usage.
+### AmundAI Observability & Testing Evidence
 
-### Custom Evaluation Results
+<table>
+  <tr>
+    <td width="33.33%" align="center" valign="top">
+      <h3>02. Execution Traces</h3>
+      <a href="docs/evidence/traces.jpg">
+        <img src="docs/evidence/traces.jpg" width="100%" alt="AmundAI Execution Traces"/>
+      </a>
+      <b>Execution Monitoring</b>
+      <p>Agent traces, model spans, latency, and token usage.</p>
+    </td>
+    <td width="33.33%" align="center" valign="top">
+      <h3>03. Custom Evaluations</h3>
+      <a href="docs/evidence/evaluations.jpg">
+        <img src="docs/evidence/evaluations.jpg" width="100%" alt="Custom Evaluation Results"/>
+      </a>
+      <b>Seven Evaluation Rubrics</b>
+      <p>Task-specific quality checks and evaluation outcomes.</p>
+    </td>
+    <td width="33.33%" align="center" valign="top">
+      <h3>04. Investigations</h3>
+      <a href="docs/evidence/investigations.jpg">
+        <img src="docs/evidence/investigations.jpg" width="100%" alt="AmundAI Investigation Evidence"/>
+      </a>
+      <b>AI-Assisted Investigation</b>
+      <p>Latency alerts, supporting evidence, and investigation findings.</p>
+    </td>
+  </tr>
+</table>
 
-Add screenshots showing the seven configured evaluation rubrics and their results.
 
-### Investigation Evidence
-
-Add screenshots of the completed latency investigation and its supporting evidence.
-
-Suggested screenshot locations:
-
-```text
-docs/evidence/application.jpg
-docs/evidence/traces.jpg
-docs/evidence/evaluations.jpg
-docs/evidence/investigations.jpg
-```
 
 ## 13. Future Enhancements
 
