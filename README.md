@@ -155,32 +155,19 @@ Consequently, a text-based evaluator could lack the visual evidence needed to ve
 - Record the evaluation as a separate execution span.
 - Assess whether descriptions are grounded in visible image details.
 
-**Issue 3: Variable Processing Latency**
-
-Different executions showed variations in processing time.
-
-Since the workflow involves image generation and a separate visual evaluation, both operations contribute to the total response time.
-
-**Expected Improvement:**
-- Measure generation and evaluation latency separately.
-- Monitor total execution duration.
-- Configure alerts for unusually slow executions.
-
 ### 6.2 Platform-Level Issues
 
-**Issue 1: Evaluation Context Limitations**
-
-Text-based evaluation may not have access to the original uploaded image, making visual accuracy difficult to verify using text-only trace information.
-
-**Issue 2: Dashboard Refresh Delay**
+**Issue 1: Dashboard Refresh Delay**
 
 The evaluation dashboard initially displayed 5/5 checks and subsequently displayed 7/7 after refreshing.
 
 This indicated a stale dashboard display during the observed test, although the underlying cause was not established.
 
-**Issue 3: Investigation Confidence**
+**Issue 2: Limited Flexibility in Defining Custom Agent Success Criteria**
 
-Automated investigations may produce hypotheses with limited confidence. Their findings need to be verified against actual execution traces and error evidence.
+During testing, I identified a limitation in defining what constitutes a successful agent execution. Generic success indicators may confirm that an agent completed its execution, but they do not necessarily establish whether the intended task was completed correctly.
+
+Different agents have different objectives and output requirements. Without flexible, task-specific success criteria, it can be difficult to distinguish successful execution from actual task success.
 
 ## 7. Improvements Implemented
 
@@ -202,8 +189,7 @@ Four successful executions were analyzed to understand processing-time variation
 
 | Metric | Observed Result |
 |---|---:|
-| Successful executions analyzed | 4 |
-| Fastest execution | 16 seconds |
+| Fastest execution | 15 seconds |
 | Slowest execution | 29 seconds |
 | Average execution time | 21.25 seconds |
 | Configured latency alert threshold | 25,000 ms |
@@ -255,10 +241,10 @@ Caricature-summarizer/
 ├── docs/
 │   ├── banner.png
 │   └── evidence/
-│       ├── application.png
-│       ├── traces.png
-│       ├── evaluations.png
-│       └── investigations.png
+│       ├── application.jpg
+│       ├── traces.jpg
+│       ├── evaluations.jpg
+│       └── investigations.jpg
 │
 ├── .gitignore
 └── README.md
@@ -354,10 +340,10 @@ Add screenshots of the completed latency investigation and its supporting eviden
 Suggested screenshot locations:
 
 ```text
-docs/evidence/application.png
-docs/evidence/traces.png
-docs/evidence/evaluations.png
-docs/evidence/investigations.png
+docs/evidence/application.jpg
+docs/evidence/traces.jpg
+docs/evidence/evaluations.jpg
+docs/evidence/investigations.jpg
 ```
 
 ## 13. Future Enhancements
