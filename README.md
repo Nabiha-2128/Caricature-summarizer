@@ -150,6 +150,7 @@ Unsupported file formats also required rejection at the upload-validation stage.
 The evaluation dashboard initially displayed 5/5 checks and subsequently displayed 7/7 after refreshing.
 
 This indicated a stale dashboard display during the observed test, although the underlying cause was not established.
+
 **Issue 2: Visual Grounding and Evaluation Accuracy**
 
 The Gemini generation request received the uploaded image, but the AmundAI trace recorded image metadata rather than the original image itself.
@@ -162,7 +163,7 @@ Consequently, a text-based evaluator could lack the visual evidence needed to ve
 - Record the evaluation as a separate execution span.
 - Assess whether descriptions are grounded in visible image details.
 
-**Issue 2: Limited Flexibility in Defining Custom Agent Success Criteria**
+**Issue 3: Limited Flexibility in Defining Custom Agent Success Criteria**
 
 During testing, I identified a limitation in defining what constitutes a successful agent execution. Generic success indicators may confirm that an agent completed its execution, but they do not necessarily establish whether the intended task was completed correctly.
 
