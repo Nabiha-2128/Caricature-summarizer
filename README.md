@@ -143,6 +143,13 @@ Unsupported file formats also required rejection at the upload-validation stage.
 - Reject unsupported file types.
 - Improve semantic classification of non-caricature images.
 
+### 6.2 Platform-Level Issues
+
+**Issue 1: Dashboard Refresh Delay**
+
+The evaluation dashboard initially displayed 5/5 checks and subsequently displayed 7/7 after refreshing.
+
+This indicated a stale dashboard display during the observed test, although the underlying cause was not established.
 **Issue 2: Visual Grounding and Evaluation Accuracy**
 
 The Gemini generation request received the uploaded image, but the AmundAI trace recorded image metadata rather than the original image itself.
@@ -154,14 +161,6 @@ Consequently, a text-based evaluator could lack the visual evidence needed to ve
 - Pass the original image and generated description to the evaluator.
 - Record the evaluation as a separate execution span.
 - Assess whether descriptions are grounded in visible image details.
-
-### 6.2 Platform-Level Issues
-
-**Issue 1: Dashboard Refresh Delay**
-
-The evaluation dashboard initially displayed 5/5 checks and subsequently displayed 7/7 after refreshing.
-
-This indicated a stale dashboard display during the observed test, although the underlying cause was not established.
 
 **Issue 2: Limited Flexibility in Defining Custom Agent Success Criteria**
 
